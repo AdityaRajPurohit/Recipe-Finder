@@ -5,3 +5,11 @@
 .container{
     max-width: 500px;
 }
+.Heading{
+    text-align:center;
+}
+.jumbotron{
+    padding: 10px;
+    text-align:center;
+    background-color: white;
+}

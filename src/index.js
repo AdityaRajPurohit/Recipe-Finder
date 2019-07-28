@@ -1,14 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Heading from './Heading';
-import Search from './Serach';
-const App = () =>{
-    return (
-        <div>
-            <Heading />
-            <Search />
-        </div>
-    );
-}
+import './index.css';
+import App from './App'
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<App/>,document.querySelector('#root'));
