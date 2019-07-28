@@ -4,7 +4,7 @@ export default class HeadBar extends Component {
     render() {
         return (
             <div>
-                <h3 className="Heading">Type a Dish Name to Search for its Ingredients</h3>
+                <h3 className="Heading">{this.props.content}</h3>
             </div>
         )
     }
