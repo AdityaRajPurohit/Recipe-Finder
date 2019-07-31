@@ -100,22 +100,22 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div>
-        <div classNameName="container">
+      <div className="Search-bar">
+        <div className="container">
           <br />
-          <form classNameName="card-sm" onSubmit={this.onFormSubmitted.bind(this)}>
-            <div classNameName="card-body row align-items-center">
-              <div classNameName="col">
+          <form className="card-sm" onSubmit={this.onFormSubmitted.bind(this)}>
+            <div className="card-body row align-items-center">
+              <div className="col">
                 <input
-                  classNameName="form-control form-control-borderless"
+                  className="form-control form-control-borderless"
                   type="search"
                   placeholder="Enter the Name of Dish"
                   onChange={this.inputChangedHandler}
-
+                  style={{ textAlign: "center" }}
                 />
               </div>
-              <div classNameName="col-auto">
-                <button classNameName="btn  btn-primary" type="submit" >
+              <div className="col-auto">
+                <button className="btn  btn-danger" type="submit" >
                   Get Ingredients
               </button>
               </div>
@@ -124,6 +124,7 @@ export default class Search extends Component {
         </div>
 
         {this.display()}
+
       </div>
 
     );

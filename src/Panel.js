@@ -1,40 +1,91 @@
 import React, { Component } from 'react'
 import './Panel.css';
-import HeadBar from './HeadBar';
+import './Search';
 
 export default class TitleBar extends Component {
     render() {
+        // console.log("Panel:" + this.props.data.meals);
         return (
-            <div className="jumbotron jumbotron-fluid" style={{ backgroundColor: "#FBE3CF" }}>
+            <div className="jumbotron box" >
                 <div className="container-fluid">
                     {/* Title */}
-                    <div className="alert alert-info" role="alert">
-                        <a href="#" className="alert-link">{this.props.data.meals.name}</a>
+                    <div className="alert alert-info" role="alert" style={{
+                        backgroundColor: "#1564b2"
+                    }}>
+                        <a href="#" className="alert-link">Name of the dish</a>
                     </div>
                     {/* Content */}
-                    <div className="card mb-3" >
-                        <div className="row no-gutters">
+                    <div className="card mb-3" style={{ maxWidth: "540" }}>
+                        <div className="row no-gutters jumbotron containt-container">
                             {/* Iamge */}
-                            <div className="col-md-4">
-                                <img src="..." className="card-img" alt="..." />
+                            <div className=" image-container" >
+                                <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/wpputp1511812960.jpg" className="card-img" alt="food item" />
                             </div>
 
-                            <div className="col-md-8">
+
+                            {/* Right Item */}
+                            <div className="col-md-8 containt-box">
                                 <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                    <div className="list1">
+                                        <ul className="list-group">
+                                            <li className="list-group-item">The category of the meal</li>
+                                            <li className="list-group-item">The area of the meal</li>
+                                        </ul>
+                                        <div>
+                                            <div className="scrollable " style={{ height: 250 }}>
+                                                <ul className="list-group">
+                                                    <li className="list-group-item">
+                                                        Cras justo odio
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+                                                    <li className="list-group-item">Dapibus ac facilisis in
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+
+                                                    <li className="list-group-item">Porta ac consectetur ac
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+                                                    <li className="list-group-item">Vestibulum at eros
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+                                                    <li className="list-group-item">Vestibulum at eros
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+                                                    <li className="list-group-item">Vestibulum at eros
+                                                        <span className="badge badge-primary badge-pill">14</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* Recipe */}
+                        <div className="card col-md-12 Recipe-box ">
+                            <h2 >Recipe</h2>
+                            <div className=" scrollable Recipe ">
+                                he title of the meal should be mentioned in bold, similar to a panel header. There should be a heart emoji beside
+                                the title that acts as a ‘like’ button for a particular recipe/meal. If you like that recipe/meal, you can click on
+                                 the heart button, which will tThen turn red. Clicking on the heart button again should ‘unlike’ the recipe/meal.
+                                 This should happen for all the meals independently
+                                 he title of the meal should be mentioned in bold, similar to a panel header. There should be a heart emoji beside
+                                the title that acts as a ‘like’ button for a particular recipe/meal. If you like that recipe/meal, you can click on
+                                 the heart button, which will tThen turn red. Clicking on the heart button again should ‘unlike’ the recipe/meal.
+                                 This should happen for all the meals independently
+
+                                 he title of the meal should be mentioned in bold, similar to a panel header. There should be a heart emoji beside
+                                the title that acts as a ‘like’ button for a particular recipe/meal. If you like that recipe/meal, you can click on
+                                 the heart button, which will tThen turn red. Clicking on the heart button again should ‘unlike’ the recipe/meal.
+                                 This should happen for all the meals independently
                             </div>
                         </div>
                     </div>
 
 
-
-
-
                 </div>
-            </div>
+            </div >
         )
     }
 }

@@ -1,0 +1,40 @@
+.panel-box {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+}
+.containt-container {
+  display: flex;
+}
+.image-container {
+  margin: 20px;
+  margin-left: 35px;
+  max-height: 200px;
+  max-width: 400px;
+}
+.box {
+  background: #0f487f;
+  background: linear-gradient(to right, #1e90ff, #1564b2 55%, #0f487f);
+}
+.containt-box {
+  margin: 20px;
+  max-height: 420px;
+  max-width: 760px;
+}
+li {
+  text-align: left;
+}
+.scrollable {
+  max-height: 250px;
+  overflow: auto;
+}
+.Recipe-box {
+  padding: 50px;
+  padding-top: 30px;
+  height: 250px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.Recipe {
+  height: 250px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
