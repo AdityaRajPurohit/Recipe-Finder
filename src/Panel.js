@@ -28,7 +28,7 @@ export default class TitleBar extends Component {
                         <div className="row no-gutters jumbotron text-white bg-primary">
                             {/* Iamge */}
                             <div className=" image-container" >
-                                <img src={this.props.data.i.thumbnail} className="card-img" alt="food item" />
+                                <a href={this.props.data.i.youtubeLink} target="blank"><img src={this.props.data.i.thumbnail} className="card-img" alt="food item" /></a>
                             </div>
 
 
