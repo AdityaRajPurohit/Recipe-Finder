@@ -88,9 +88,8 @@ export default class Search extends Component {
       return <HeadBar content="No Data has been received" />
     }
     if (this.state.divValue === 3) {
-
       return this.meals.map(i => {
-        return <Panel key={`${i.id}`} data={`${i}`} />
+        return <Panel key={`${i.id}`} data={{ i }} />
       });
 
     }
