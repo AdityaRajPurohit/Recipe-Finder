@@ -2,7 +2,7 @@
   "name": "ingredients",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adityarajpurohit.github.io/Recipe-Finder/",
+  "homepage": "https://adityarajpurohit.github.io/RecipeFinder/",
   "dependencies": {
     "axios": "^0.19.0",
     "gh-pages": "^2.1.0",
