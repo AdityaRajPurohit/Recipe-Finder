@@ -15,11 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-<<<<<<< HEAD
-    "deploy": "gh-pages -b master -d build",
-=======
     "deploy": "gh-pages -d build",
->>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

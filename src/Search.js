@@ -111,57 +111,44 @@ export default class Search extends Component {
         //  mapping result to panel 
         return this.meals.map(i => {
           return <Panel key={`${i.id}`} data={{ i }} />   // error when calling api with same value twice 
-
-          display() {
-            if (this.state.divValue === 1) {
-              return <HeadBar content="Type a Dish Name to Search for its Ingredients" />
-            }
-            if (this.state.divValue === 2) {
-              return <HeadBar content="No Data has been received" />
-            }
-            if (this.state.divValue === 3) {
-              return this.meals.map(i => {
-                return <Panel key={`${i.id}`} data={{ i }} />
-
-              });
-
-            }
-          }
+        })
+      }
+    }
 
 
 
-          render() {
-            return (
-              <div className="Search-bar">
-                <div className="container">
-                  <br />
-                  <form className="card-sm" onSubmit={this.onFormSubmitted.bind(this)}>
-                    <div className="card-body row align-items-center">
-                      <div className="col">
-                        <input
-                          className="form-control form-control-borderless"
-                          type="search"
-                          placeholder="Enter the Name of Dish"
-                          onChange={this.inputChangedHandler}
-                          style={{ textAlign: "center" }}
-                        />
-                      </div>
-                      <div className="col-auto">
-                        <button className="btn  btn-danger" type="submit" >
-                          Get Ingredients
-              </button>
-                      </div>
-                    </div>
-                  </form>
+    render() {
+      return (
+        <div className="Search-bar">
+          <div className="container">
+            <br />
+            <form className="card-sm" onSubmit={this.onFormSubmitted.bind(this)}>
+              <div className="card-body row align-items-center">
+                <div className="col">
+                  <input
+                    className="form-control form-control-borderless"
+                    type="search"
+                    placeholder="Enter the Name of Dish"
+                    onChange={this.inputChangedHandler}
+                    style={{ textAlign: "center" }}
+                  />
                 </div>
-
-                {/* display for conditiona rendering  */}
-
-                {this.display()}
-
+                <div className="col-auto">
+                  <button className="btn  btn-danger" type="submit" >
+                    Get Ingredients
+              </button>
+                </div>
               </div>
+            </form>
+          </div>
 
-            );
+          {/* display for conditiona rendering  */}
 
-          }
-        }
+          {this.display()}
+
+        </div>
+
+      );
+
+    }
+  }
