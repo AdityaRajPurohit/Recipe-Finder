@@ -7,7 +7,10 @@ export default class TitleBar extends Component {
     render() {
         const ingredientList = []
         var j = 0
+<<<<<<< HEAD
         // adding data to list 
+=======
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
         while (this.props.data.i.ingredient[j] !== "") {
             ingredientList.push(
                 <li key={j} className="list-group-item list1">
@@ -44,7 +47,10 @@ export default class TitleBar extends Component {
                                         <div>
                                             <div className="scrollable " style={{ height: 250 }}>
                                                 <ul className="list-group">
+<<<<<<< HEAD
                                                     {/* Displaying data added to list  */}
+=======
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
                                                     {ingredientList}
                                                 </ul>
                                             </div>
@@ -58,9 +64,13 @@ export default class TitleBar extends Component {
                         <div className="card col-md-12 Recipe-box  bg-primary">
                             <h2 >Recipe</h2>
                             <div className=" scrollable Recipe  text-white">
+<<<<<<< HEAD
 
                                 {this.props.data.i.instruction}
 
+=======
+                                {this.props.data.i.instruction}
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
                             </div>
                         </div>
                     </div>

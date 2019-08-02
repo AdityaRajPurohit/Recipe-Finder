@@ -10,7 +10,11 @@ export default class Search extends Component {
     divValue: 1,
     disable: true
   }
+<<<<<<< HEAD
   // array to store the data returned by api call
+=======
+
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
   meals = []
 
   inputChangedHandler = (e) => {
@@ -18,22 +22,35 @@ export default class Search extends Component {
     state.value = e.target.value;
     console.log(this.state);
   }
+<<<<<<< HEAD
   // to call the api with the name passed in input field
+=======
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
   async onFormSubmitted(e) {
     e.preventDefault();
     this.setState(this.state);
     console.log(this.state.value);
+<<<<<<< HEAD
 
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.value}`;
     const r = await fetch(url);
     const result = await r.json();
     if (result.meals === null) {     //if meals is empty then set divValue to 2 for condtitional rendering 
+=======
+    let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.value}`;
+    const r = await fetch(url);
+    const result = await r.json();
+    if (result.meals === null) {
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
       this.setState({ divValue: 2 });
       console.log(this.state.divValue);
 
     }
     else {
+<<<<<<< HEAD
       //if  data is not null then map the result to meals 
+=======
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
       let k = 0;
       console.log(result);
       result.meals.map(i => {
@@ -78,12 +95,16 @@ export default class Search extends Component {
         return 0;
       });
       console.log(this.meals);
+<<<<<<< HEAD
       // set divValue to 3 for condtitional rendering 
+=======
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
       this.setState({ divValue: 3 });
 
     }
   }
 
+<<<<<<< HEAD
   // function for conditional rendering 
   display() {
     if (this.state.divValue === 1) {
@@ -98,6 +119,18 @@ export default class Search extends Component {
       //  mapping result to panel 
       return this.meals.map(i => {
         return <Panel key={`${i.id}`} data={{ i }} />   // error when calling api with same value twice 
+=======
+  display() {
+    if (this.state.divValue === 1) {
+      return <HeadBar content="Type a Dish Name to Search for its Ingredients" />
+    }
+    if (this.state.divValue === 2) {
+      return <HeadBar content="No Data has been received" />
+    }
+    if (this.state.divValue === 3) {
+      return this.meals.map(i => {
+        return <Panel key={`${i.id}`} data={{ i }} />
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
       });
 
     }
@@ -129,7 +162,11 @@ export default class Search extends Component {
             </div>
           </form>
         </div>
+<<<<<<< HEAD
         {/* display for conditiona rendering  */}
+=======
+
+>>>>>>> 5b3572dd3cca8ff74407c7d0f5f3a41810709fd7
         {this.display()}
 
       </div>
