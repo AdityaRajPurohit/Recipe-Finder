@@ -14,7 +14,6 @@ export default class Search extends Component {
   // array to store the data returned by api call
 
   meals = []
-
   inputChangedHandler = (e) => {
     const state = this.state;
     state.value = e.target.value;
@@ -40,6 +39,7 @@ export default class Search extends Component {
       //if  data is not null then map the result to meals 
       let k = 0;
       console.log(result);
+
       result.meals.map(i => {
         let m = {
           id: i.idMeal,
@@ -100,6 +100,7 @@ export default class Search extends Component {
     }
     if (this.state.divValue === 3) {
       //  mapping result to panel 
+
       return this.meals.map(i => {
         return <Panel key={`${i.id}`} data={{ i }} />   // error when calling api with same value twice 
       });
@@ -109,6 +110,8 @@ export default class Search extends Component {
 
 
   render() {
+
+
     return (
       <div className="Search-bar">
         <div className="container">
