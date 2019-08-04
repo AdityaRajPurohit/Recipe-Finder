@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HeadBar from './HeadBar';
 import Panel from './Panel';
+import './index.css'
 
 
 export default class Search extends Component {

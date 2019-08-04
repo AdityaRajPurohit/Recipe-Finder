@@ -3,6 +3,18 @@ import './Panel.css';
 import './Search';
 
 export default class TitleBar extends Component {
+    c = "#323232"
+    like(e) {
+        if (e.target.value === "false") {
+            e.target.style.color = "red";
+            e.target.value = "true";
+        }
+        else {
+            e.target.style.color = "#323232";
+            e.target.value = "false"
+        }
+
+    };
 
     render() {
         const ingredientList = []
@@ -18,12 +30,15 @@ export default class TitleBar extends Component {
             j++;
         }
         console.log("Panel:" + this.props.data.i.source);
+
         return (
+
             <div className="jumbotron box" >
                 <div className="container-fluid">
                     {/* Title */}
                     <div className="alert alert-info head">
                         <a href={this.props.data.i.source} className="alert-link text-white" target="blank"><h2 >{this.props.data.i.name}</h2></a>
+                        <i className="heart outline icon heart-icon big" onLoad={this.like} style={{ color: this.c }} value="false" onClick={this.like} ></i>
                     </div>
                     {/* Content */}
                     <div className="card mb-3 " style={{ maxWidth: "540" }}>
